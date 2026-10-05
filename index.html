@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Alıcı ve IBAN bilgilerini görüntüleyin ve kopyalayın.">
+<meta name="theme-color" content="#b71923">
+<meta name="robots" content="noindex,nofollow">
+<title>Ödeme Bilgileri · ONUR KESKİNER</title>
+<style>
+:root{--brand:#b71923;--dark:#740f17;--ink:#292325;--muted:#746b6d;--line:#eee6e7}
+*{box-sizing:border-box}body{margin:0;background:#f7f5f5;color:var(--ink);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100svh}main{width:min(100% - 32px,440px);margin:48px auto 32px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;font-size:12px;color:var(--muted)}.eyebrow{letter-spacing:.16em;font-weight:650}.pill{border:1px solid #e4d9db;border-radius:30px;padding:6px 10px;white-space:nowrap}.card{background:white;border-radius:26px;overflow:hidden;box-shadow:0 16px 60px #4c11180c;border:1px solid #ffffff}.hero{position:relative;isolation:isolate;padding:30px 28px;color:white;background:linear-gradient(120deg,var(--dark),var(--brand));overflow:hidden}.hero:after{content:"";position:absolute;z-index:-1;width:240px;height:240px;right:-110px;bottom:-135px;border:32px solid #ffffff08;border-radius:50%}.bank{display:flex;gap:11px;align-items:center;font-size:24px;font-weight:750;letter-spacing:-.04em}.mark{display:grid;place-items:center;width:36px;height:36px;border:1px solid #ffffff35;border-radius:11px;background:#ffffff0d}.mark svg{width:22px;height:22px}.hero .label{color:#ffffffb8;margin-top:32px}.label{font-size:12px;font-weight:600;letter-spacing:.09em;margin:0 0 10px}h1{font-size:27px;line-height:1.25;letter-spacing:-.035em;margin:0;overflow-wrap:anywhere}.intro{font-size:14px;margin:10px 0 0;color:#ffffffe0}.content{padding:8px 24px 24px}.row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}.row .label{color:var(--muted)}.value{margin:0;font-weight:600;overflow-wrap:anywhere}.copy-icon{flex-shrink:0;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:13px;background:#fcf9f9;color:var(--brand);cursor:pointer}.copy-icon svg,.action svg{width:19px;height:19px;flex-shrink:0}.iban-box{margin-top:22px;border:1px solid #ebdfe1;border-radius:16px;padding:18px;background:#faf4f5}.iban-box .label{color:var(--muted)}.iban{font:600 19px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:-.035em;overflow-wrap:anywhere;margin:0;user-select:all}.action{width:100%;min-height:50px;display:flex;justify-content:center;align-items:center;gap:10px;border-radius:13px;font-family:inherit;font-size:14px;font-weight:650;line-height:1.4;cursor:pointer;padding:13px 16px}.primary{margin-top:16px;border:1px solid var(--brand);background:var(--brand);color:white}.secondary{margin-top:10px;border:1px solid #ebdfe1;background:white;color:var(--brand)}button:hover{filter:brightness(.96)}button:focus-visible{outline:3px solid var(--brand);outline-offset:4px}button:disabled{opacity:.5;cursor:not-allowed}.hint{text-align:center;color:var(--muted);font-size:12px;margin:18px 0 0}.notice{background:#fff7e8;border:1px solid #f1dfbd;color:#795718;border-radius:12px;padding:11px 13px;font-size:13px;margin:16px 0 0}.footer{color:var(--muted);text-align:center;font-size:12px;line-height:1.7;margin:20px 18px}.status{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 32px);background:#292325;color:white;border-radius:12px;padding:12px 18px;font-size:14px;box-shadow:0 4px 25px #0002}.status:empty{display:none}.manual{display:none;margin-top:14px}.manual.visible{display:block}.manual label{font-size:13px}.manual textarea{width:100%;margin-top:8px;padding:12px;font:14px/1.5 monospace;border:1px solid #dcc5c9;border-radius:10px;resize:vertical}@media(max-width:480px){main{margin-top:24px}.hero{padding:26px 24px}.content{padding:8px 20px 24px}.iban{font-size:18px}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s,filter .15s}}
+</style>
+</head>
+<body>
+<main>
+<div class="top"><span class="eyebrow">ÖDEME BİLGİLERİ</span><span class="pill">Havale / EFT / FAST</span></div>
+<article class="card" aria-label="Alıcı hesap bilgileri">
+<header class="hero">
+<div class="bank"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m3 9 9-5 9 5M4 20h16M5 10v7m7-7v7m7-7v7"/></svg></span><span id="bank-name">Ziraat Bankası</span></div>
+<p class="label">HESAP SAHİBİ</p><h1 id="hero-name">ONUR KESKİNER</h1><p class="intro">Transfer için gerekli tüm bilgiler bir arada.</p>
+</header>
+<div class="content">
+<div class="row"><div><p class="label">ALICI ADI / TİCARİ ÜNVAN</p><p class="value" id="recipient">ONUR KESKİNER</p></div><button class="copy-icon" data-copy="recipient" aria-label="Alıcı adını kopyala"></button></div>
+<div class="row"><div><p class="label">BANKA ADI</p><p class="value" id="bank-detail">Ziraat Bankası</p></div><button class="copy-icon" data-copy="bank" aria-label="Banka adını kopyala"></button></div>
+<div class="iban-box"><p class="label">IBAN NUMARASI</p><p class="iban" id="iban">TR43 0001 0025 5061 4124 8750 04</p></div>
+<button class="action primary" data-copy="iban"><span class="icon" aria-hidden="true"></span>IBAN’ı Kopyala</button>
+<button class="action secondary" data-copy="all"><span class="icon" aria-hidden="true"></span>Tüm Bilgileri Kopyala</button>
+<p class="hint">IBAN boşluksuz kopyalanır.<br>Banka uygulamanızın IBAN alanına yapıştırabilirsiniz.</p>
+<p class="notice" id="notice" hidden></p>
+<div class="manual" id="manual"><label for="manual-text">Otomatik kopyalama yapılamadı. Metni seçip kopyalayın.</label><textarea id="manual-text" readonly rows="3"></textarea></div>
+</div>
+</article>
+<p class="footer">Transfer öncesinde alıcı adı ve IBAN bilgilerini kontrol edin.<br>Bu sayfa bankanın resmî sitesi değildir; para transferi gerçekleştirmez.</p>
+</main>
+<div class="status" id="status" role="status" aria-live="polite" aria-atomic="true"></div>
+<script>
+// Her müşteri için yalnızca bu alanı düzenleyin.
+// banka: enpara, ziraat, akbank, garanti, isbankasi, yapikredi, halkbank, vakifbank
+// Gerçek IBAN girildiğinde biçim ve kontrol basamakları doğrulanır.
+const CONFIG = {
+  banka: 'ziraat',
+  alici: 'ONUR KESKİNER',
+  iban: 'TR43 0001 0025 5061 4124 8750 04'
+};
+const BANKS = {
+  enpara: {name:'Enpara',color:'#7131aa',dark:'#38224d'},
+  ziraat: {name:'Ziraat Bankası',color:'#b71923',dark:'#740f17'},
+  akbank: {name:'Akbank',color:'#c41624',dark:'#7c1020'},
+  garanti: {name:'Garanti BBVA',color:'#087c45',dark:'#03452a'},
+  isbankasi: {name:'Türkiye İş Bankası',color:'#14579c',dark:'#0d2c54'},
+  yapikredi: {name:'Yapı Kredi',color:'#0868b0',dark:'#053a69'},
+  halkbank: {name:'Halkbank',color:'#087c9b',dark:'#034455'},
+  vakifbank: {name:'VakıfBank',color:'#956700',dark:'#4c390d'}
+};
+const bank = BANKS[CONFIG.banka] || BANKS.enpara;
+const rawIban = CONFIG.iban.replace(/\s/g,'').toUpperCase();
+function validIban(value){
+  if(!/^TR\d{24}$/.test(value)) return false;
+  const rearranged=value.slice(4)+value.slice(0,4);
+  const digits=rearranged.replace(/[A-Z]/g,c=>String(c.charCodeAt(0)-55));
+  let remainder=0;for(const digit of digits) remainder=(remainder*10+Number(digit))%97;
+  return remainder===1;
+}
+document.documentElement.style.setProperty('--brand',bank.color);
+document.documentElement.style.setProperty('--dark',bank.dark);
+document.querySelector('meta[name="theme-color"]').content=bank.color;
+document.getElementById('bank-name').textContent=bank.name;
+document.getElementById('bank-detail').textContent=bank.name;
+document.getElementById('hero-name').textContent=CONFIG.alici;
+document.getElementById('recipient').textContent=CONFIG.alici;
+document.getElementById('iban').textContent=(rawIban.match(/.{1,4}/g)||[]).join(' ');
+document.title='Ödeme Bilgileri · '+CONFIG.alici;
+const notice=document.getElementById('notice');
+const valid=validIban(rawIban);
+if(!valid || !CONFIG.alici.trim()){
+  notice.hidden=false;
+  notice.textContent='Hesap bilgileri eksik veya IBAN geçersiz. Transfer yapmadan önce hesap sahibiyle iletişime geçin.';
+  document.querySelectorAll('[data-copy="iban"],[data-copy="all"]').forEach(button=>button.disabled=true);
+}
+const copySvg='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/></svg>';
+document.querySelectorAll('.copy-icon,.icon').forEach(el=>el.innerHTML=copySvg);
+const texts={recipient:CONFIG.alici,bank:bank.name,iban:rawIban,all:'Alıcı: '+CONFIG.alici+'\nBanka: '+bank.name+'\nIBAN: '+rawIban};
+let toastTimer;
+function announce(message){clearTimeout(toastTimer);document.getElementById('status').textContent=message;toastTimer=setTimeout(()=>document.getElementById('status').textContent='',3000)}
+async function copyText(text){
+  if(navigator.clipboard && window.isSecureContext){try{await navigator.clipboard.writeText(text);return true}catch{}}
+  const input=document.createElement('textarea');input.value=text;input.style.position='fixed';input.style.top='0';input.style.left='-9999px';document.body.appendChild(input);input.focus();input.select();input.setSelectionRange(0,text.length);
+  let success=false;try{success=document.execCommand('copy')}catch{}input.remove();return success;
+}
+document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
+  const text=texts[button.dataset.copy];
+  if(await copyText(text)){document.getElementById('manual').classList.remove('visible');button.focus();announce('Kopyalandı');}
+  else{document.getElementById('manual').classList.add('visible');const input=document.getElementById('manual-text');input.value=text;input.focus();input.select();announce('Metni seçip elle kopyalayabilirsiniz.');}
+}));
+</script>
+</body>
+</html>
